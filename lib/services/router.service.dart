@@ -1,22 +1,29 @@
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:projects2/features/features.dart';
-import 'package:projects2/home.page.dart';
 
 class RouterService {
-  final routes = GoRouter(
-    routes: [
+  final List<RouteBase> _routes = [];
+  final RouteBase initialPage;
+  final RouteBase? splashScreenPage;
+
+  RouterService({
+    required this.initialPage,
+    this.splashScreenPage,
+  }) {
+    _routes.add(initialPage);
+  }
+
+  List<RouteBase> get routes => _routes;
+
+  void registerRoute(
+    String route, {
+    required Widget page,
+  }) {
+    _routes.add(
       GoRoute(
-        path: MyHomePage.routeID,
-        builder: (context, state) => MyHomePage(),
+        path: route,
+        builder: (context, state) => page,
       ),
-      GoRoute(
-        path: AuthenticationPage.routeID,
-        builder: (context, state) => AuthenticationPage(),
-      ),
-      GoRoute(
-        path: RegisterPage.routeID,
-        builder: (context, state) => RegisterPage(),
-      ),
-    ],
-  );
+    );
+  }
 }

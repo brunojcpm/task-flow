@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:projects2/config/app_runtime.dart';
 import 'package:projects2/theme/theme.dart';
 
@@ -18,7 +19,9 @@ class MyApp extends StatelessWidget {
         colorScheme: MaterialTheme.lightScheme(),
         useMaterial3: true,
       ),
-      routerConfig: appRuntime.routerService.routes,
+      routerConfig: GoRouter(
+        routes: appRuntime.routerService.routes,
+      ),
     );
   }
 }

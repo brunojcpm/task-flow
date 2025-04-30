@@ -1,0 +1,2 @@
+/Users/brunosilv96/projects2/task-flow/android/app/.cxx/Debug/312f3557/x86_64/CMakeFiles/edit_cache.dir
+/Users/brunosilv96/projects2/task-flow/android/app/.cxx/Debug/312f3557/x86_64/CMakeFiles/rebuild_cache.dir

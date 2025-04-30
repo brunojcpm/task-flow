@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:projects2/_themes/default.theme.dart';
+import 'package:projects2/ui/core/themes/default.theme.dart';
 import 'package:projects2/app/app.router.dart';
 
 class AppWidget extends StatelessWidget {

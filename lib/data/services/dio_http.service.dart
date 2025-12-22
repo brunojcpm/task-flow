@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:projects2/data/services/services.module.dart';
+import 'package:projects2/data/services/contracts/http.service.contract.dart';
 
 class DioHttpService implements HttpService {
   final Dio dio = Dio();
